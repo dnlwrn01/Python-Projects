@@ -1,14 +1,19 @@
 
-
+#create class
 class User:
     fname = 'Daniel'
     lname = ''
     email = 'test@email.com'
     password = 'helloWorld'
 
+    #def login function
     def login(self):
+
+        #user input
         userEmail = input("Enter your email >>> ")
         userPassword = input('Enter your password >>> ')
+
+        #check for eqality
         if (userEmail == self.email and userPassword == self.password):
             print(f'Welcome Back, {self.fname}!')
         else:
