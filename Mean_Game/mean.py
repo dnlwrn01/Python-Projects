@@ -7,8 +7,6 @@
 #
 #
 
-from colorama import init
-
 def start(nice=0, mean=0, name=""):
     #get users name
     name = describe_game(name)
@@ -30,7 +28,7 @@ def describe_game(name):
             if name == "":
                 name = input("\nWhat is your name? \n>>> ").capitalize()
                 if name != "":
-                    print (Fore.BLUE + f"\nWelcome, {name}!")
+                   
                     print("\nIn this game, you will be greeted \nby several different people. \nYou can choose to be nice or mean")
                     print("but at the end of the game your fate \nwill be sealed by your actions.")
                     stop = False
