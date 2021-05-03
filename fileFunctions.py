@@ -67,10 +67,10 @@ class ParentWindow(Frame):
 
             #get modification time and format
             ti_m = os.path.getmtime(path + i)
-            m_ti = time.ctime(ti_m)
+            m_ti = datetime.datetime.fromtimestamp(ti_m)
 
             #if modified within 24 hours, move files
-            if m_ti < ft:
+            if m_ti < HourDateTime:
                 shutil.move(path+i, destination)
                 
 if __name__ == '__main__':
