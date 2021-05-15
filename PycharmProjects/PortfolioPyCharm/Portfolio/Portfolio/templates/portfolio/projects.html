@@ -1,0 +1,21 @@
+{% extends "portfolio_base.html" %}
+{% block title %}dnlwrn | projects{% endblock %}
+{% block content %}
+	  <!--PROJECTS-->
+
+    <div class="shadow-5-strong bg-light" style="height: 90vh;">
+      <h2 style="color: #00072D;" class="display-4 text-center py-5">Select <strong>Projects</strong></h2>
+
+      <div class="row row-cols-1 row-cols-md-5 g-1 p-5 overflow-hidden">
+        <div class="col">
+
+
+                {% include 'portfolio/project_card.html' %}
+
+
+        </div>
+      </div>
+    </div>
+
+  <!--END PROJECTS-->
+{% endblock %}

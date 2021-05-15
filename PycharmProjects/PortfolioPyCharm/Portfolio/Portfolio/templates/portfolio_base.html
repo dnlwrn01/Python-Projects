@@ -1,0 +1,299 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		    <!-- MDB icon -->
+		<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+		<!-- Google Fonts Roboto -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+		<!--Google Fonts Crimson Text -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet">
+		<!--Google Fonts Josefin Sans -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+		<!-- MDB -->
+		<link rel="stylesheet" href = "{% static '/css/mdb.min.css' %}" />
+
+		<title>{% block title%}{% endblock %}</title>
+	</head>
+
+
+	<header>
+
+            <!--NAVIGATION-->
+        <nav class="navbar navbar-expand-lg sticky-top shadow-5-strong" style="background-color: #00072D">
+
+            <!-- Container wrapper -->
+          <div class="container-fluid">
+            <a class="navbar-brand fs-3 pt-2 ps-4 text-start" href="#" style="color:#fff; font-family: 'Josefin Sans', sans-serif;">
+              DNLWRN
+            </a>
+            <!-- Toggle button -->
+            <button
+              class="navbar-toggler justify-content-md-end"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarRightAlignExample"
+              aria-controls="navbarRightAlignExample"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i style = "color: white;" class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse text-center" id="navbarRightAlignExample">
+              <!-- Left links -->
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'index' %}" style="color: #fff" onMouseOver="this.style.color='#70161E'" onMouseOut="this.style.color='#fff'"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'projects' %}" style="color: #fff" onMouseOver="this.style.color='#70161E'" onMouseOut="this.style.color='#fff'"><strong>Projects</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog' %}" style="color: #fff" onMouseOver="this.style.color='#70161E'" onMouseOut="this.style.color='#fff'"><strong>Blog</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}" style="color: #fff" onMouseOver="this.style.color='#70161E'" onMouseOut="this.style.color='#fff'"><strong>About</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}" tabindex="-1" aria-disabled="false"
+                  style="color: #fff" onMouseOver="this.style.color='#70161E'" onMouseOut="this.style.color='#fff'"><strong>Contact</strong></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--END NAVIGATION-->
+	</header>
+
+	<body id="body" style="overflow: none;">
+		<div class="checkbook-container">
+			{% block content %}{% endblock %}
+		</div>
+            <!--FOOTER-->
+        <footer class="text-center shadow-5-strong" style="background-color: #00072D">
+          <!-- Grid container -->
+          <div class="container p-4">
+
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Twitter -->
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+              <!-- Linkedin -->
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+              <!-- Github -->
+              <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+
+
+            <!-- Section: Form -->
+            <section class="">
+              <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                  <!--Grid column-->
+                  <div class="col-auto">
+                    <p class="pt-2">
+                      <strong>Sign up for our newsletter</strong>
+                    </p>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-5 col-12">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form5Example2" class="form-control" />
+                      <label class="form-label" for="form5Example2">Email address</label>
+                    </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-auto">
+
+                    <!-- Submit button -->
+                    <button
+                    type="button"
+                    class="btn btn-lg btn-light btn-outline-dark btn-rounded"
+                    data-mdb-toggle="popover"
+                    data-mdb-trigger="focus"
+                    data-mdb-placement="top"
+                    data-mdb-content="Weekly Blog Updates, Project Prograssion, and Meetups."
+                  >
+                    SIGN UP
+                  </button>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </form>
+            </section>
+            <!-- Section: Form -->
+
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+              <p class="p-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequ
+              </p>
+            </section>
+            <!-- Section: Text -->
+
+
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Links</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Links</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Links</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Links</h5>
+
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                      <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">dnlwrn.com</a>
+          </div>
+          <!-- Copyright -->
+          </footer>
+        <!--END FOOTER-->
+
+
+        <!-- MDB -->
+        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+        <!-- Custom scripts -->
+        <script type="text/javascript">
+          var a = document.getElementById('disc-50');
+          a.onclick = function () {
+            Clipboard_CopyTo("T9TTVSQB");
+            var div = document.getElementById('code-success');
+            div.style.display = 'block';
+            setTimeout(function () {
+              document.getElementById('code-success').style.display = 'none';
+            }, 900);
+          };
+
+          function Clipboard_CopyTo(value) {
+            var tempInput = document.createElement("input");
+            tempInput.value = value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+          }
+          </script>
+      </body>
+  </html>
