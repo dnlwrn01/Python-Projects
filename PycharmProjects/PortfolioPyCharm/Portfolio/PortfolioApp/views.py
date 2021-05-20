@@ -1,20 +1,26 @@
 from django.shortcuts import render
-from .models import BlogPost, Project, Contact
+from .models import Project, BlogPost
+import os
 
 
 def home(request):
 
-    return render(request, 'portfolio/index.html')
+    Project.image1 = str(Project.image1)[10:]
+    cards = Project.objects.all()
+    content = {'cards': cards}
+    return render(request, 'portfolio/index.html', content)
 
 
 def projects(request):
-    card = Project.objects.all()
-    context = {'card': card}
-    return render(request, 'portfolio/projects.html', context)
+    cards = Project.objects.all()
+    content = {'cards': cards}
+    return render(request, 'portfolio/projects.html', content)
 
 
 def blog(request):
-    return render(request, 'portfolio/blog.html')
+    posts = BlogPost.objects.all()
+    content = {'posts': posts}
+    return render(request, 'portfolio/blog.html', content)
 
 
 def about(request):
@@ -23,4 +29,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'portfolio/contact.html')
+
+
 

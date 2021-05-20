@@ -4,7 +4,7 @@
 {% block content %}
   <!--HOME-->
     <div class="bg-image p-5 text-start text-white"
-    style="background-image: url('../../static/img/banner1.jpg'); height: 90vh;">
+    style="background-image: url('../../static/img/banner1.jpg');">
         <div>
             <h1 class="mb-3 h4 text-start py-3">Hello, my name is</h1>
             <h1  class="display-1 text-start text-bold"><strong><b>Daniel Warren</b></strong></h1>
@@ -32,6 +32,16 @@
                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,<br>
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+
+            <div class="row row-cols-1 row-cols-md-4 g-5 p-5 overflow-hidden">
+
+
+            {% for card in cards %}
+                {% include 'portfolio/featured_project_card.html' %}
+            {% endfor %}
+
+
+            </div>
         </div>
     </div>
   <!--END HOME-->

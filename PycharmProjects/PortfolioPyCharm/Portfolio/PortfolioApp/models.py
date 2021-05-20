@@ -13,7 +13,6 @@ class BlogPost(models.Model):
     subTitle = models.CharField(max_length=50, default=' ')
     content = models.TextField()
 
-    BlogPosts = models.Manager()
 
     def __str__(self):
         return self.title + ' | ' + str(self.date)
@@ -40,12 +39,19 @@ class Project(models.Model):
     database = MultiSelectField(max_length=25, choices=databaseUsed, default=' ')
     title = models.CharField(max_length=50, default=' ')
     subTitle = models.CharField(max_length=50, default=' ')
-    image = models.ImageField(default=' ')
+    image1 = models.ImageField(upload_to='static/img/upload/')
+    image2 = models.ImageField(upload_to='static/img/upload/')
+    image3 = models.ImageField(upload_to='static/img/upload/')
+    image4 = models.ImageField(upload_to='static/img/upload/')
     content = models.TextField(default=' ')
+    purpose = models.TextField(default=' ')
+    outcome = models.TextField(default=' ')
+    reflection = models.TextField(default=' ')
 
 
     def __str__(self):
         return self.title + ' | ' + str(self.date)
+
 
 
 class Contact(models.Model):

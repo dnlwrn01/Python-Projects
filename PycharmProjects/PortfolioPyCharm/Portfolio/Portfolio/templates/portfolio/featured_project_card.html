@@ -1,0 +1,144 @@
+{% load static %}
+
+  <div class="col ">
+          <div class="card h-1 ">
+
+
+            <div style= "background-color: #00072D" class="card-body text-center shadow-2-strong p-0 rounded">
+              <img
+                        src = "{{ card.image1 }}"
+                        class = "img-fluid shadow-2-strong p-0 rounded"
+                        alt = "Project Image Card">
+
+
+              <div style= "background-color: #fff" class="p-4">
+                <h5 class="card-title text-dark m-0"> {{ card.title }} </h5>
+                <p class="card-text text-dark">
+                  {{ card.subTitle }}
+                </p>
+
+                <!-- Button trigger modal -->
+                <button
+                type="button"
+                style="background-color: #4d4a42"
+                class="btn btn-primary text-light btn-rounded hover-overlay"
+                data-mdb-toggle="modal"
+                data-mdb-target="#one"
+                >
+                View Project
+                </button>
+              </div>
+
+
+              <!-- Modal -->
+              <div
+              class="modal fade"
+              id="one"
+              tabindex="-1"
+              aria-labelledby="one"
+              aria-hidden="true"
+              >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div style="background-color: #00072D;" class="modal-header ">
+                    <h5 class="modal-title text-light" id="one">{{ card.title }}</h5>
+                    <button
+                      type="button"
+                      class="btn-close btn-light"
+                      data-mdb-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div style="background-color: #aaa;" class="modal-body">
+
+                    <!--inner modal-->
+                    <div class="row">
+                      <div class="col-4">
+                        <img
+                          src ="{% static '{{card.image1}}' %}"
+                          class = "img-thumbnail p-0"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="col-4">
+                        {{ card.image1 }}
+                        <img
+                          src="{{ card.image1.url }}"
+                          class="img-thumbnail p-0"
+                          alt="{Project Photo}"
+                        />
+                      </div>
+                      <div class="col-4">
+                        <img
+                          src="{{ card.image4 }}"
+                          class="img-thumbnail p-0"
+                          alt="..."
+                        />
+                      </div>
+
+                    </div>
+                    <div class="row py-2">
+                      <div class="col-12">
+                        <h3 class="h3 text-start">Description:</h3>
+                      </div>
+                      <div class="col-sm-12">
+                        <p class="text-start">
+                          {{ card.content }}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row py-2">
+                      <div class="col-12">
+                        <h3 class="h5 text-start p-2"> Purpose: </h3>
+                        <p> {{ card.purpose }} </p>
+                      </div>
+                    </div>
+                    <div class="row py-2">
+                      <div class="col-12">
+                        <h3 class="h5 text-start p-2"> Outcome: </h3>
+                        <p> {{ card.outcome }} </p>
+                      </div>
+                    </div>
+                    <div class="row py-2">
+                      <div class="col-12">
+                        <h3 class="h5 text-start p-2"> Reflection: </h3>
+                        <p> {{ card.reflection }} </p>
+                      </div>
+                    </div>
+                    <div class="row py-2">
+                      <div class="col-12">
+                        <h3 class="h5 text-start p-2"> Skills Used: </h3>
+                      </div>
+                    </div>
+
+                    <div class="row py-2">
+                      <div class="col-sm-12 text-start ps-5 ">
+                        <li> {{ card.language }} </li>
+                        <li> {{ card.IDE }} </li>
+                        <li> {{ card.framework }} </li>
+                        <li> {{ card.database }} </li>
+                      </div>
+                    </div>
+
+
+                    <!--end inner modal-->
+
+                  </div>
+                  <div style="background-color: #00072D; " class="modal-footer rounded">
+                    <button type="button" class="btn btn-light text-dark">Live Demo</button>
+                    <button type="button" class="btn btn-light text-dark">View on GitHub</button>
+                  </div>
+
+                </div>
+              </div>
+              </div>
+
+              <div class="p-3 shadow-2-strong">
+                <span style="background-color: #4d4a42" class="badge rounded-pill text-light">HTML</span>
+                <span style="background-color: #4d4a42" class="badge rounded-pill text-light">CSS</span>
+                <span style="background-color: #4d4a42" class="badge rounded-pill text-light">JS</span>
+                <span style="background-color: #4d4a42" class="badge rounded-pill text-light">PHP</span>
+              </div>
+            </div>
+          </div>
+  </div>
